@@ -19,26 +19,27 @@ const Skills = () => {
     function setthestate(x){
       sethoverid(x)
     }
-    const skilldiv='p-1 md:p-4 lg:p-0 w-[17%] h-24 md:h-40 flex items-center justify-center'
+    const skilldiv='p-1 md:p-4 lg:p-0 w-[17%] h-[70px] md:h-40 flex items-center justify-center'
 
-    const skillbelow='w-[20%] h-4'
+    const skillbelow='w-[17%] h-2 md:h-4'
     const skcolor='bg-[#0d2f67] rounded-[10px]'
-    const skhovercolor=['bg-[#191964ad]','bg-[#191964ad] rounded-t-[20px]']
+    const skhovercolor=['bg-[#191964ad]','bg-[#191964ad] rounded-t-[15px] md:rounded-t-[20px]']
     
 
 
   return (
     <div className='px-2 md:px-10'>
       <div className='flex flex-col items-center justify-around'>
-        <div className='font-bold text-2xl py-8'>Skills</div>
+        <div className='font-bold text-2xl py-6 md:py-8'>Skills & Tools</div>
+        
         <div className='w-full'>
-          <div className='flex items-center w-full justify-center gap-1'>
-              <div onMouseOver={()=>{setthestate(1)}} className={`${hoverid===1?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={reactico} alt="" /></div>
-              <div onMouseOver={()=>{setthestate(2)}} className={`${hoverid===2?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={jsico} alt="" /></div>
-              <div onMouseOver={()=>{setthestate(3)}} className={`${hoverid===3?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={gitico} alt="" /></div>
-              <div onMouseOver={()=>{setthestate(4)}} className={`${hoverid===4?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={vsico} alt="" /></div>
-              <div onMouseOver={()=>{setthestate(5)}} className={`${hoverid===5?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={cssico} alt="" /></div>
-              <div onMouseOver={()=>{setthestate(6)}} className={`${hoverid===6?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[60px] md:w-24' src={htmlico} alt="" /></div>
+          <div className='flex items-center w-full justify-around gap-1'>
+              <div onMouseOver={()=>{setthestate(1)}} className={`${hoverid===1?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={reactico} alt="" /></div>
+              <div onMouseOver={()=>{setthestate(2)}} className={`${hoverid===2?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={jsico} alt="" /></div>
+              <div onMouseOver={()=>{setthestate(3)}} className={`${hoverid===3?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={gitico} alt="" /></div>
+              <div onMouseOver={()=>{setthestate(4)}} className={`${hoverid===4?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={vsico} alt="" /></div>
+              <div onMouseOver={()=>{setthestate(5)}} className={`${hoverid===5?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={cssico} alt="" /></div>
+              <div onMouseOver={()=>{setthestate(6)}} className={`${hoverid===6?skhovercolor[1]:skcolor} ${skilldiv}`}><img className='w-[40px] md:w-24' src={htmlico} alt="" /></div>
           </div>
           <div className='flex items-center w-full justify-around gap-1'>
             <div className={`${skillbelow} ${hoverid===1?skhovercolor[0]:'bg-white'}`}></div>
@@ -52,7 +53,7 @@ const Skills = () => {
 
         </div>
         
-        <div style={{border:'2px solid black'}} className={`h-[200px] w-full flex items-center justify-center text-[13px] md:text-2xl font-bold text-center px-16`}>{skilldetails["hf0"+hoverid]}</div>
+        <div style={{border:'2px solid black'}} className={`h-[200px] w-full flex items-center justify-center text-[13px] md:text-2xl font-bold text-center p-3 md:px-16`}>{skilldetails["hf0"+hoverid]}</div>
 
       </div>
 
