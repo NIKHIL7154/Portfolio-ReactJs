@@ -19,7 +19,7 @@ root.render(
     <Navbar />
     <Myinfo />
     <Skills />
-    <Projects/>
+    <Projects />
   </React.StrictMode>
 );
 
