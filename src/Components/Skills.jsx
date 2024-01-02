@@ -11,8 +11,8 @@ const Skills = () => {
       "hf06":"Proficient in HTML, I create structured and accessible web content using tags for elements like headings and links. Incorporating CSS and JavaScript enhances the overall design and functionality of the web pages.",
       "hf05":"With a solid grasp of CSS, I skillfully style and design web content, ensuring a visually appealing and cohesive presentation. Leveraging CSS properties, I customize layouts, colors, and typography to enhance the overall user experience.",
       "hf02":"I possess hands-on experience with JavaScript, proficiently developing interactive and dynamic features for web applications. Leveraging my skills in event handling, DOM manipulation, and asynchronous programming, I enhance user interactions.",
-      "hf04":"I effectively utilize Git for version control, ensuring a systematic and collaborative approach to managing code repositories. With expertise in branching, merging, and tracking changes, I streamline the development process and facilitate efficient collaboration within a team.",
-      "hf03":"Having a command of Visual Studio Code, I efficiently navigate and edit code, utilizing its rich features and extensions for a seamless development experience. With proficiency in debugging and version control integrations, I enhance productivity in software development projects.",
+      "hf03":"I effectively utilize Git for version control, ensuring a systematic and collaborative approach to managing code repositories. With expertise in branching, merging, and tracking changes, I streamline the development process and facilitate efficient collaboration within a team.",
+      "hf04":"Having a command of Visual Studio Code, I efficiently navigate and edit code, utilizing its rich features and extensions for a seamless development experience. With proficiency in debugging and version control integrations, I enhance productivity in software development projects.",
       "hf01":'Possessing in-depth knowledge of React, I architect scalable and efficient web applications with reusable components, ensuring a modular and maintainable codebase. My expertise extends to state management and component lifecycle, enabling optimal performance and a seamless user interface in React-based projects.'
     }
 
@@ -53,7 +53,7 @@ const Skills = () => {
 
         </div>
         
-        <div style={{border:'2px solid black'}} className={`h-[200px] w-full flex items-center justify-center text-[13px] md:text-2xl font-bold text-center p-3 md:px-16`}>{skilldetails["hf0"+hoverid]}</div>
+        <div style={{border:'2px solid black'}} className={`h-[200px] md:min-h-[300px] w-full flex items-center justify-center rounded-lg text-[13px] md:text-2xl font-bold text-center p-3 md:px-16`}>{skilldetails["hf0"+hoverid]}</div>
 
       </div>
 

@@ -6,6 +6,7 @@ import './index.css';
 import Navbar from './Components/Navbar';
 import Myinfo from './Components/Myinfo';
 import Skills from './Components/Skills';
+import Projects from './Components/Projects';
 
 
 
@@ -18,6 +19,7 @@ root.render(
     <Navbar />
     <Myinfo />
     <Skills />
+    <Projects/>
   </React.StrictMode>
 );
 
