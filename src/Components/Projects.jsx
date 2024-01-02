@@ -5,15 +5,7 @@ import portfolio from '../assets/portfolio.webp'
 import guessword from '../assets/guessword.png'
 import tictactoe from '../assets/tictactoe.png'
 const Projects = () => {
-  
-  function creatediv(){
-    let i=0
-    for(i=0;i<10;i++){
-      let compl=document.createElement('div')
-      compl.innerHTML=`Hello this is ${i}`
-      document.getElementById('divtotarget').appendChild(compl)
-    }
-  }
+
   function scrolltop(){
     document.documentElement.scrollTop = 0;
   }
