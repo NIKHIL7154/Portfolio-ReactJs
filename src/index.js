@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import Myinfo from './Components/Myinfo';
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
+import Footer from './Components/Footer';
 
 
 
@@ -20,6 +21,8 @@ root.render(
     <Myinfo />
     <Skills />
     <Projects />
+    <Footer />
+
   </React.StrictMode>
 );
 
