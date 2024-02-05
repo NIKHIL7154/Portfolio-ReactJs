@@ -8,7 +8,8 @@ import Myinfo from './Components/Myinfo';
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
 import Footer from './Components/Footer';
-
+import Cardproject from './Components/Cardproject';
+import Myprojects from './Components/Myprojects';
 
 
 
@@ -18,10 +19,12 @@ root.render(
   <React.StrictMode>
     
     <Navbar />
-    <Myinfo />
+    <Myprojects />
+    {/* <Myinfo />
     <Skills />
     <Projects />
-    <Footer />
+
+    <Footer /> */}
 
   </React.StrictMode>
 );
