@@ -1,26 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Projects.css'
 
-import portfolio from '../assets/portfolio.webp'
-import guessword from '../assets/guessword.png'
-import tictactoe from '../assets/tictactoe.png'
+
+import {app} from '../fbconfig'
+import {collection,getFirestore,getDocs ,query,orderBy} from "firebase/firestore";
 import Cardproject from './Cardproject'
 const Projects = () => {
+  const db= getFirestore(app)
 
-  function scrolltop(){
-    document.documentElement.scrollTop = 0;
-  }
+  const [holder, setholder]=useState()
+  useEffect(() => {
+    const myquery= query(collection(db,'portfolio'),orderBy('Order','asc'))
+      getDocs(myquery).then(async (data)=>{
+        let myarray=[]
+        
+        await data.forEach((doc)=>{
+          let docdata=doc.data()
+          myarray.push(<Cardproject key={docdata.Order} details={docdata}/>)
+        })
+        setholder(myarray)
 
-  const linksto ={
-    11:'https://github.com/NIKHIL7154/TIC-TAC-TOE-GAME',
-    12:'https://nikhil7154.github.io/TIC-TAC-TOE-GAME/',
-    21:'https://github.com/NIKHIL7154/Guess-The-Word-JS',
-    22:'https://nikhil7154.github.io/Guess-The-Word-JS/',
-    32:'https://github.com/NIKHIL7154/Portfolio-ReactJs'
-  }
+      }).catch((err)=>{
+        console.log(err)
+      })
+  }, [db]);
 
-  const imgcss='h-[250px] md:h-[25vw] rounded-xl md:rounded-2xl'
+  
 
+  
   return (
     <div className='py-2 md:py-7 md:m-10 m-2 mt-6 flex flex-col items-center justify-center rounded-md md:rounded-3xl border-2 md:border-[3px] border-[#000]'>
       <p className='mb-[15px] md:mb-[40px] font-bold text-xl md:text-2xl'>Stuff I've Built</p>
@@ -28,12 +35,12 @@ const Projects = () => {
 
       <div className='w-[90%] md:w-[80%] flex items-center justify-center'>
         <div id='projectcarry' className='grid-cols-1 md:grid-cols-2 grid gap-4 md:gap-12'>
-          <Cardproject />
+          {holder}
           
         </div>
         
       </div>
-
+    
     </div>
   )
 }
